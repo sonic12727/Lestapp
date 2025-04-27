@@ -78,22 +78,5 @@
             </table>
         {% endif %}
     </div>
-    <script>
-        document.querySelector('.custom-file-input').addEventListener('change', function (e) {
-            var fileName = document.getElementById("file").files[0].name;
-            var nextSibling = document.querySelector('.custom-file-label');
-            nextSibling.innerText = fileName;
-        });
-
-        document.querySelector('form').addEventListener('submit', function () {
-            document.body.classList.add('loading');
-        });
-
-        window.addEventListener('load', function () {
-            document.body.classList.remove('loading');
-        });
-        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-
-    </script>
 </body>
 </html>
